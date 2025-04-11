@@ -1,0 +1,120 @@
+/* File Structure:
+repository/
+|-- module2-solution/
+    |-- index.html
+    |-- css/
+        |-- styles.css
+*/
+
+/* index.html */
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Our Menu</h1>
+  <div class="container">
+    <section class="box chicken">
+      <div class="title">Chicken</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel justo velit.</p>
+    </section>
+    <section class="box beef">
+      <div class="title">Beef</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel justo velit.</p>
+    </section>
+    <section class="box sushi">
+      <div class="title">Sushi</div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel justo velit.</p>
+    </section>
+  </div>
+</body>
+</html>
+
+
+<style> { 
+     box-sizing: border-box;
+}
+ 
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em; /* 75% larger than normal text */
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+}
+
+.box {
+  border: 1px solid black;
+  background-color: #f2f2f2;
+  padding: 40px 20px 20px 20px;
+  margin: 10px;
+  position: relative;
+  float: left;
+  color: #000;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ccc;
+  border: 1px solid black;
+  padding: 5px 10px;
+  font-size: 1.25em; /* 25% larger than normal text */
+}
+
+.chicken .title {
+  background-color: #ffcccc;
+}
+
+.beef .title {
+  background-color: #ccffcc;
+}
+
+.sushi .title {
+  background-color: #ccccff;
+}
+
+/* Desktop - 992px and above */
+@media (min-width: 992px) {
+  .box {
+    width: 32%;
+  }
+}
+
+/* Tablet - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .box {
+    width: 48%;
+  }
+  .box:nth-child(3) {
+    width: 100%;
+  }
+}
+
+/* Mobile - 767px and below */
+@media (max-width: 767px) {
+  .box {
+    width: 100%;
+  }
+}
+</style>
+
+
+
+
